@@ -1,51 +1,36 @@
-# templates/spa
+# Image64
 
-This template leverages [Remix SPA Mode](https://remix.run/docs/en/main/guides/spa-mode) to build your app as a Single-Page Application using [Client Data](https://remix.run/docs/en/main/guides/client-data) for all of your data loads and mutations.
+Image64 is a web application that allows users to upload images and convert them to Base64 strings, as well as decode Base64 strings back into images.
 
 ## Setup
 
-```shellscript
-npx create-remix@latest --template remix-run/remix/templates/spa
-```
+To set up the project locally, follow these steps:
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/Kawaeee/image64.git
+    cd image64
+    ```
+
+2. Install dependencies:
+    ```bash
+    npm install
+    ```
 
 ## Development
 
-You can develop your SPA app just like you would a normal Remix app, via:
+To start the development server, run:
 
-```shellscript
+```bash
 npm run dev
 ```
 
+This will start the application in development mode and you can access it at `http://localhost:3000`.
+
 ## Production
 
-When you are ready to build a production version of your app, `npm run build` will generate your assets and an `index.html` for the SPA.
+To build the project for production, run:
 
-```shellscript
+```bash
 npm run build
 ```
-
-### Preview
-
-You can preview the build locally with [vite preview](https://vitejs.dev/guide/cli#vite-preview) to serve all routes via the single `index.html` file:
-
-```shellscript
-npm run preview
-```
-
-> [!IMPORTANT]
->
-> `vite preview` is not designed for use as a production server
-
-### Deployment
-
-You can then serve your app from any HTTP server of your choosing. The server should be configured to serve multiple paths from a single root `/index.html` file (commonly called "SPA fallback"). Other steps may be required if the server doesn't directly support this functionality.
-
-For a simple example, you could use [sirv-cli](https://www.npmjs.com/package/sirv-cli):
-
-```shellscript
-npx sirv-cli build/client/ --single
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever css framework you prefer. See the [Vite docs on css](https://vitejs.dev/guide/features.html#css) for more information.
