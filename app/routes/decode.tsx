@@ -6,11 +6,16 @@ export default function Decode() {
   const [imageSrc, setImageSrc] = useState("");
 
   const handleDecode = () => {
-    setImageSrc(base64);
+    if (base64.startsWith("data:image/")) {
+      setImageSrc(base64);
+    } else {
+      alert("Please enter a valid Base64 encoded image string.");
+      setImageSrc("");
+    }
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-blue-500 to-purple-600 text-white p-4">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-blue-500 to-purple-600 text-white p-4 transition ease-in-out">
       <h1 className="text-3xl font-bold mb-6">Decode Base64 to Image</h1>
       <textarea 
         value={base64} 
@@ -25,7 +30,7 @@ export default function Decode() {
       >
         Convert to Image
       </button>
-      {imageSrc && <img src={imageSrc} alt="Decoded" className="max-w-full rounded border border-gray-300" />}
+      {imageSrc && <img src={imageSrc} alt="Decoded" className="max-w-full max-h-screen rounded border border-gray-300" />}
       <a 
         href="/" 
         className="mt-4 px-4 py-2 bg-white text-blue-500 rounded hover:bg-gray-100 transition-transform transform hover:scale-105"

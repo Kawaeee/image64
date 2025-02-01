@@ -12,11 +12,12 @@ export default function Upload() {
       reader.onload = () => setBase64(reader.result);
     } else {
       alert("Please upload a valid image file.");
+      event.target.value = ""; // Clear the input
     }
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-blue-500 to-purple-600 text-white p-4">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-l from-blue-500 to-purple-600 text-white p-4 transition ease-in-out">
       <h1 className="text-3xl font-bold mb-6">Upload & Convert to Base64</h1>
       <input 
         type="file" 

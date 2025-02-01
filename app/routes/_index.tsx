@@ -2,14 +2,14 @@ import type { MetaFunction } from "@remix-run/node";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "Image64 Converter" },
+    { title: "Image64" },
     { name: "description", content: "Convert images to Base64 and decode Base64 to images." },
   ];
 };
 
 export default function Index() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-blue-500 to-purple-600 text-white p-4">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-blue-500 to-purple-600 text-white p-4 transition ease-in-out">
       <header className="text-center mb-12">
         <h1 className="text-5xl font-bold mb-4">Image64 Converter</h1>
         <p className="text-lg">Easily convert images to Base64 and decode Base64 to images.</p>
