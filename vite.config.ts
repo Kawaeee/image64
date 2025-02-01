@@ -9,8 +9,10 @@ declare module "@remix-run/node" {
 }
 
 export default defineConfig({
+  base: "/image64/",
   plugins: [
     remix({
+      basename: "/image64/",
       ssr: false,
       future: {
         v3_fetcherPersist: true,

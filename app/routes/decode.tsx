@@ -33,7 +33,7 @@ export default function Decode() {
       {imageSrc && <img src={imageSrc} alt="Decoded" className="max-w-full max-h-screen rounded border border-gray-300" />}
       <a 
         href="/" 
-        className="mt-4 px-4 py-2 bg-white text-blue-500 rounded hover:bg-gray-100 transition-transform transform hover:scale-105"
+        className="mt-8 px-4 py-2 bg-white text-blue-500 rounded hover:bg-gray-100 transition-transform transform hover:scale-105"
       >
         Back to Home
       </a>
