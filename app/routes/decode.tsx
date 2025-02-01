@@ -1,5 +1,6 @@
 // app/routes/decode.tsx
 import { useState } from "react";
+import { Link } from "@remix-run/react";
 
 export default function Decode() {
   const [base64, setBase64] = useState("");
@@ -31,12 +32,12 @@ export default function Decode() {
         Convert to Image
       </button>
       {imageSrc && <img src={imageSrc} alt="Decoded" className="max-w-full max-h-screen rounded border border-gray-300" />}
-      <a 
-        href="/" 
+      <Link 
+        to="/" 
         className="mt-8 px-4 py-2 bg-white text-blue-500 rounded hover:bg-gray-100 transition-transform transform hover:scale-105"
       >
         Back to Home
-      </a>
+      </Link>
     </div>
   );
 }
