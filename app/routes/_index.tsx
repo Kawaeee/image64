@@ -17,10 +17,10 @@ export default function Index() {
       </header>
       <nav className="flex flex-col items-center gap-4">
         <Link 
-          to="/upload" 
+          to="/encode" 
           className="px-6 py-3 bg-white text-blue-500 rounded shadow hover:bg-gray-100 transition-transform transform hover:scale-105"
         >
-          Upload & Convert to Base64
+          Encode Image to Base64
         </Link>
         <Link
           to="/decode" 
